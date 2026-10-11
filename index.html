@@ -39,11 +39,13 @@ legend{font-family:var(--f-display);font-style:italic;font-weight:500;font-size:
 .r{display:grid;grid-template-columns:minmax(0,1fr) 108px;align-items:center;gap:10px;padding:3px 0}
 .r label,.r .lbl{font-size:13px;color:var(--ink)}
 .r small{color:var(--muted);font-size:11px;margin-left:2px}
-input,select{width:100%;font:500 13px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink);background:var(--input);border:1px solid var(--input-line);border-radius:4px;padding:6px 8px;text-align:right}
+input,select{width:100%;text-align:right;font:500 13px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink);background:var(--input);border:1px solid var(--input-line);border-radius:4px;padding:6px 8px;text-align:right}
 select{text-align:right;text-align-last:right;direction:ltr}
 .link{font:500 11px var(--f-body);color:var(--accent);background:none;border:0;padding:0 0 0 6px;cursor:pointer;text-decoration:underline}
 input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 input:disabled{opacity:.45}
+input[type=number]{text-align:right;direction:ltr;-moz-appearance:textfield;appearance:textfield}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .val{font:500 13px/1 var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;padding:6px 8px;background:var(--calc);border-radius:4px;color:var(--ink)}
 .sep{height:1px;background:var(--line);margin:8px 0}
 .off .lbl,.off label{color:var(--muted)}
@@ -90,7 +92,7 @@ textarea{line-height:1.5}
     <div class="groups">
       <fieldset>
         <legend>Component Details</legend>
-        <div class="r"><label for="cName">Component</label><input id="cName" data-def="98 T" value="98 T" style="text-align:left"></div>
+        <div class="r"><label for="cName">Component</label><input id="cName" data-def="98 T" value="98 T"></div>
         <div class="sep"></div>
         <div class="r"><label for="cModule">Normal Module</label><input id="cModule" type="number" step="any" data-def="3.25" value="3.25"></div>
         <div class="r"><label for="cPA">Normal Pressure Angle <small>°</small></label><input id="cPA" type="number" step="any" data-def="20" value="20"></div>
